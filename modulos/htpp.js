@@ -1,3 +1,5 @@
+//Creacion de server usando http
+
 const http = require("http");
 
 http.createServer(router).listen(3000);
@@ -8,7 +10,8 @@ function router(req, res) {
 
   switch (req.url) {
     case "/hola":
-      res.write("Hola que tal");
+      let saludo = hola();
+      res.write(saludo);
       res.end();
       break;
 
@@ -17,11 +20,18 @@ function router(req, res) {
       res.end();
   }
 
-  res.writeHead(201, { "content-type": "text/plain" });
-  //Escribir respuesta al usuario
-  res.write("Hola ya se usar http en nodejs");
+  //   res.writeHead(201, { "content-type": "text/plain" });
+  //   //Escribir respuesta al usuario
+  //   res.write("Hola ya se usar http en nodejs");
 
-  res.end();
+  //   res.end();
+  // }
+
+  function hola() {
+    return "Hola que tal";
+  }
+  console.log("Escucahndo http en el punto 3000");
 }
 
-console.log("Escucahndo http en el punto 3000");
+//Para ver como esta funcionando usamos chrome devtools en
+// la seccion de inspect, esta nos dara una forma rapida de analizarla
