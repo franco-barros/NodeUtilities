@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "gulp-server-livereload": "^1.9.2",
+    "gulp-server-livereload": "^1.0.1",
     "moment": "^2.30.1",
     "puppeteer": "^23.10.4"
   }
